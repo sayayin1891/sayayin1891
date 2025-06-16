@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift Calendar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Work Shift Calendar</h1>
+
+    <div class="controls">
+        <label for="shift-pattern">Shift Pattern:</label>
+        <select id="shift-pattern">
+            <option value="7x7" selected>7x7</option>
+            <option value="10x10">10x10</option>
+            <option value="14x14">14x14</option>
+        </select>
+
+        <label for="start-date">Cycle Start Date:</label>
+        <input type="date" id="start-date">
+
+        <fieldset>
+            <legend>Shift Type:</legend>
+            <input type="radio" id="shift-type-day" name="shift-type" value="day" checked>
+            <label for="shift-type-day">Day</label>
+            <input type="radio" id="shift-type-night" name="shift-type" value="night">
+            <label for="shift-type-night">Night</label>
+        </fieldset>
+    </div>
+
+    <div class="calendar-navigation">
+        <button id="prev-month">Previous Month</button>
+        <h2 id="current-month-year">Month Year</h2>
+        <button id="next-month">Next Month</button>
+    </div>
+
+    <div id="calendar-grid" class="calendar-grid">
+        <!-- Calendar days will be generated here by JavaScript -->
+    </div>
+
+    <div id="error-message" class="error-message" style="color: red; margin-top: 10px;"></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
