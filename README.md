@@ -25,16 +25,42 @@ Aplicación web estilo **Fitia** para personalizar planes nutricionales por tipo
 - `index.html`: interfaz principal.
 - `styles.css`: estilos visuales responsivos.
 - `app.js`: lógica de selección de cuerpo, plan y armado de menú.
+- `.github/workflows/deploy-pages.yml`: despliegue automático a GitHub Pages.
 
-## Ejecución local
+## Cómo visualizar la app
 
-Puedes abrir `index.html` directamente en el navegador o levantar un servidor estático:
+### Opción 1: Local (rápido)
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Luego visita `http://localhost:8000`.
+Luego abre:
+
+- `http://localhost:8000`
+- o `http://127.0.0.1:8000`
+
+### Opción 2: Publicada con GitHub Pages
+
+Este repositorio ya incluye workflow de despliegue automático para Pages.
+
+1. Ve a **Settings → Pages** del repositorio.
+2. En **Source**, selecciona **GitHub Actions**.
+3. Haz push a tu rama principal (`main`, `master` o `work`) o ejecuta manualmente el workflow **Deploy static app to GitHub Pages**.
+4. GitHub publicará la app y te entregará una URL como:
+   - `https://<tu-usuario>.github.io/<tu-repo>/`
+
+## Solución al problema de visualización
+
+Si no podías ver la app, normalmente era por uno de estos motivos:
+
+- Abrir el HTML desde GitHub web **no ejecuta** la app como sitio.
+- No había un despliegue automático configurado para Pages.
+
+Con este cambio:
+
+- Puedes verla localmente con servidor estático.
+- Puedes verla online mediante GitHub Pages con deploy automático.
 
 ## Roadmap recomendado (siguiente fase)
 
