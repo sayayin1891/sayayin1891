@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NutriSync Pro - Planes Fitia Style</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="badge">Versión Free + Premium</p>
+        <h1>NutriSync Pro</h1>
+        <p>
+          App de nutrición estilo Fitia para crear menús keto, veganos o proteicos,
+          personalizar objetivos por tipo de cuerpo y sincronizar actividad con Apple
+          Watch o relojes Android.
+        </p>
+      </div>
+      <div class="hero-card">
+        <h2>Objetivo diario</h2>
+        <p><strong>Calorías:</strong> <span id="caloriesGoal">2200</span> kcal</p>
+        <p><strong>Macronutrientes:</strong> <span id="macroGoal">40/30/30</span></p>
+      </div>
+    </header>
+
+    <main>
+      <section class="grid two-columns">
+        <article class="card">
+          <h2>1) Selecciona tipo de cuerpo</h2>
+          <label for="bodyType">Tipo somático</label>
+          <select id="bodyType">
+            <option value="mesomorfo">Mesomorfo (gana músculo con facilidad)</option>
+            <option value="endomorfo">Endomorfo (tendencia a acumular grasa)</option>
+            <option value="ectomorfo">Ectomorfo (metabolismo acelerado)</option>
+          </select>
+          <p id="bodySuggestion" class="helper-text"></p>
+        </article>
+
+        <article class="card">
+          <h2>2) Define estilo alimenticio</h2>
+          <label for="planType">Plan nutricional</label>
+          <select id="planType">
+            <option value="keto">Keto</option>
+            <option value="vegano">Vegano</option>
+            <option value="proteico">Proteico</option>
+          </select>
+          <p id="planSuggestion" class="helper-text"></p>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>Constructor de menú (ejemplo)</h2>
+        <div class="grid three-columns" id="foodGrid"></div>
+        <div class="menu-summary">
+          <h3>Tu menú seleccionado</h3>
+          <ul id="selectedFoods"></ul>
+          <p><strong>Total estimado:</strong> <span id="menuTotal">0 kcal</span></p>
+        </div>
+      </section>
+
+      <section class="grid two-columns">
+        <article class="card">
+          <h2>Integración Smartwatch</h2>
+          <ul>
+            <li>Apple HealthKit + Apple Watch (pasos, frecuencia cardiaca, calorías).</li>
+            <li>Google Fit + Wear OS (actividad, entrenamiento y sueño).</li>
+            <li>Sincronización automática para ajustar macros diarios.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Medios de pago</h2>
+          <ul>
+            <li>Tarjeta de crédito/débito (Stripe).</li>
+            <li>Apple Pay y Google Pay.</li>
+            <li>PayPal y suscripción mensual/anual.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card pricing">
+        <h2>Planes</h2>
+        <div class="grid two-columns">
+          <div class="price-card free">
+            <h3>Free</h3>
+            <p class="price">$0</p>
+            <ul>
+              <li>Registro de comidas básico.</li>
+              <li>1 plan nutricional sugerido por semana.</li>
+              <li>Historial de 7 días.</li>
+            </ul>
+          </div>
+          <div class="price-card premium">
+            <h3>Premium</h3>
+            <p class="price">$8.99 / mes</p>
+            <ul>
+              <li>Menús ilimitados keto, veganos y proteicos.</li>
+              <li>Personalización por somatotipo + objetivo (bajar grasa / ganar músculo).</li>
+              <li>Integración smartwatch en tiempo real.</li>
+              <li>Recetas avanzadas, lista de compras y coaching IA.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Benchmark de apps similares</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>App</th>
+              <th>Fortaleza</th>
+              <th>Oportunidad para NutriSync Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fitia</td>
+              <td>Generador de dieta por macros y objetivos.</td>
+              <td>Agregar somatotipos + sincronización profunda con wearables.</td>
+            </tr>
+            <tr>
+              <td>MyFitnessPal</td>
+              <td>Base de alimentos muy extensa.</td>
+              <td>Mejor experiencia de menú inteligente por tipo de cuerpo.</td>
+            </tr>
+            <tr>
+              <td>Yazio</td>
+              <td>Seguimiento de ayuno y calorías intuitivo.</td>
+              <td>Mayor enfoque en premium con planes keto/vegano/proteico.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
